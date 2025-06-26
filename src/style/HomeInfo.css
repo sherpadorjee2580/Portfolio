@@ -1,0 +1,244 @@
+.img-fluid {
+  height: auto;
+  max-width: 100%;
+}
+
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  padding: 250px 0 100px;
+}
+.mainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.containerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.greeting {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.name {
+  font-size: 45px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.shortInfo {
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  span {
+    color: rgb(0, 195, 255);
+  }
+}
+.longInfo {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  a {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 195, 255);
+    border-radius: 50%;
+    border: 1px solid rgb(0, 195, 255);
+    font-size: 20px;
+    box-shadow: 0 5px 5px rgba(0, 195, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    background-color: rgb(0, 195, 255);
+    color: white;
+    transform: translateY(-5px) !important;
+  }
+}
+.downloadCV {
+  border: none;
+  background-color: rgb(9, 140, 180);
+  height: 45px;
+  width: 250px;
+  box-shadow: 0 5px 5px rgba(0, 195, 255, 0.3);
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 0;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+}
+.downloadCV::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5b5858;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.downloadCV:hover::after {
+  width: 100%;
+}
+.downloadCV:active {
+  border: none;
+  outline: none;
+  background-color: rgb(0, 195, 255);
+}
+.downloadCV:hover {
+  box-shadow: 0 0 6px 4px rgba(255, 255, 255, 0.5);
+  transform: scale(1.01);
+}
+.containerRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  animation: moveUpDown 5s linear infinite;
+}
+
+.imgContainer {
+  z-index: 1;
+  position: relative;
+  background-color: rgb(0, 195, 255);
+  border-radius: 10px;
+  width: 300px;
+  height: 180px;
+  box-sizing: border-box;
+  transition: all 1s;
+  border: 4px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 160px;
+  padding-left: 25px;
+}
+
+.imgContainer::before,
+.imgContainer::after {
+  content: "";
+  border: inherit;
+  position: absolute;
+  top: 0px;
+  left: -4px;
+  background-color: rgb(0, 195, 255);
+  border-radius: inherit;
+  height: 100%;
+  width: 104%;
+  overflow: hidden;
+}
+.imgContainer:before {
+  transform: rotate(60deg);
+}
+
+.imgContainer:after {
+  transform: rotate(-60deg);
+}
+img {
+  z-index: 2;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes SlowedmoveUpDown {
+  0% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(-7px);
+  }
+}
+@media (max-width: 768px) {
+  .mainContainer {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  .mainWrapper {
+    margin-top: 30px;
+    display: flex;
+    max-width: 768px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 0 25px;
+  }
+  .containerRight {
+    animation: SlowedmoveUpDown 3s linear infinite;
+
+    .imgContainer {
+      width: 150px;
+      height: 50px;
+      position: relative;
+      z-index: 101;
+      transition: all 0.3s ease-in-out;
+    }
+    .imgContainer::before,
+    .imgContainer::after {
+      width: 110%;
+      height: 100%;
+    }
+
+    img {
+      padding-top: 115px;
+      width: 150px;
+    }
+  }
+  .containerLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    .greeting {
+      width: 100%;
+      font-size: 22px;
+      text-align: left;
+    }
+    .name {
+      width: 100%;
+      font-size: 35px;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+import React, { forwardRef } from "react";
+import "../style/Project.css";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const Project = forwardRef((props, ref) => {
+  const projectRef = useRef();
+
+  const project = [
+    {
+      projectName: "SCHOOL Website",
+      tool1: "html",
+      tool2: "CSS",
+      tool3: "REACT",
+      image: "schoolwebsite.webp",
+    },
+    {
+      projectName: "JIRI Website",
+      tool1: "html",
+      tool2: "CSS",
+      tool3: "REACT",
+      image: "jiriImage.webp",
+    },
+    {
+      projectName: "HAMRO Website",
+      tool1: "html",
+      tool2: "CSS",
+      tool3: "REACT",
+      image: "schoolwebsite.webp",
+    },
+  ];
+  const [hoveredImg, setHoveredImg] = useState(null);
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div ref={ref} className="project">
+      <div className="project-wrap">
+        <h4 className="project-title">Projects</h4>
+        <div className="project-container">
+          {project.map((item, idx) => (
+            <motion.div
+              initial={{ opacity: 0, y: 150 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              viewport={{ once: false }}
+              ref={projectRef}
+              key={idx}
+              className="project-col"
+              onMouseEnter={() => {
+                setHoveredImg(idx);
+                setHovered(true);
+              }}
+              onMouseLeave={() => {
+                setHoveredImg(null);
+                setHovered(false);
+              }}
+            >
+              {hoveredImg === idx && (
+                <AnimatePresence>
+                  <motion.img
+                    initial={{ opacity: 0, y: -250 }}
+                    animate={{ opacity: 1, y: -100 }}
+                    exit={{ opacity: 0, y: 100 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: false }}
+                    className="project-img"
+                    src={item.image}
+                    alt="jiri-website"
+                    width={300}
+                  />
+                </AnimatePresence>
+              )}
+              <p className="project-col-title">{item.projectName}</p>
+              <div className="tools-used">
+                <span className="tools">{item.tool1}</span>
+                <span className="circle"></span>
+                <span className="tools">{item.tool2}</span>
+                <span className="circle"></span>
+                <span className="tools">{item.tool3}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+});
+
+export default Project;

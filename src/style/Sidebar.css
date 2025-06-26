@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+.sidebarContainer {
+  position: fixed;
+  top: 0;
+  background-color: #222;
+  height: 100%;
+  z-index: 100;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  /* box-shadow: 0 0 5rem 10px rgba(255,255,255,0.5); */
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.sidebar-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 120px;
+}
+.social,
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.websites {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  li {
+    list-style: none;
+    a {
+      color: #e8e8e8;
+      font-size: 20px;
+      font-weight: 400;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        color: rgb(0, 195, 255);
+      }
+    }
+  }
+}
+.menu {
+  li {
+    list-style: disc;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0%;
+      background-color: rgb(0, 195, 255);
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  li::marker {
+    color: steelblue;
+    font-size: 25px;
+  }
+}
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  text-align: center;
+  p {
+    color: #999;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .gmail {
+    display: flex;
+    gap: 10px;
+    color: #e8e8e8;
+    align-items: center;
+    .iconContainer {
+      height: 40px;
+      width: 40px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon {
+      font-size: 30px;
+      color: #e83330;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+@media (max-width:768px){
+  .sidebarContainer{
+    width: 60%;
+  }
+}

@@ -1,0 +1,129 @@
+.contactUs {
+  padding: 100px 0;
+  font-family: "Poppins";
+}
+.loader {
+  border: 5px solid #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border-top: 5px solid #999;
+  border-right: 5px solid #999;
+  border-bottom: 5px solid #999;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.contactUs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.contactUs-title p {
+  font-size: 2.5rem;
+  color: rgb(222, 222, 222);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.contactUs-formContainer {
+  display: flex;
+  gap: 60px;
+  max-width: 1140px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  flex: 0.8;
+  gap: 20px;
+}
+input {
+  border: 1px solid #999;
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 10px;
+  color: #888;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.1);
+}
+textarea {
+  border: 1px solid #999;
+  color: #888;
+  height: 80px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.1);
+}
+input,
+textarea:focus {
+  outline: none;
+}
+
+.submit {
+  height: 50px;
+  background-color: rgb(6, 115, 149);
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+.contactUs-socialmedia {
+  border: 1px solid #999;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+.contact-title {
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 10px;
+}
+.contact-title::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 2px;
+  border-radius: 25px;
+  background-color: rgb(6, 115, 149);
+  left: 0;
+  bottom: -3px;
+}
+.social-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-icon {
+  font-size: 1.5rem;
+  color: rgb(6, 115, 149);
+}
+.link {
+  color: #888;
+}
