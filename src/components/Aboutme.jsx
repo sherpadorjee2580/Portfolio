@@ -8,8 +8,8 @@ const Aboutme = forwardRef((props, ref) => {
       <div className="aboutMe-container">
         <div className="aboutMe-left">
           <motion.p
-            initial={{ opacity: 0, x: -200 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: false }}
             className="greeting"
@@ -18,9 +18,9 @@ const Aboutme = forwardRef((props, ref) => {
           </motion.p>
         </div>
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, x: -150 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: false }}
           className="aboutMe-right"
         >

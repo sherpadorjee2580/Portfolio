@@ -4,15 +4,14 @@ import { useState } from "react";
 import { IoReorderTwoOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 
-const Navbar = ({ showSidebar, hideSidebar }) => {
-  const [isOpen, SetIsOpen] = useState(null);
+const Navbar = ({ showSidebar, hideSidebar ,isOpen }) => {
 
   const changeOpen = () => {
-    SetIsOpen((prev) => !prev);
+    // SetIsOpen((prev) => !prev);
     showSidebar();
   };
   const changeClose = () => {
-    SetIsOpen((prev) => !prev);
+    // SetIsOpen((prev) => !prev);
     hideSidebar();
   };
 

@@ -10,15 +10,13 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setGoUp(true);
-    }, 3000);
+    }, 1500);
     setTimeout(() => {
       setVisible(true);
-    }, 3500);
+    }, 2000);
   });
 
-  useEffect(()=>{
-    
-  })
+  useEffect(() => {});
   return (
     <div className="app">
       {visible ? (
@@ -31,24 +29,24 @@ const App = () => {
                 className="welcomeMsg"
                 initial={{ opacity: 0, x: -150 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.2 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: false }}
               >
                 Welcome To My
               </motion.p>
               <div className="txt">
                 <motion.span
-                  initial={{ opacity: 0, y: 100 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1 }}
+                  initial={{ opacity: 0, x: -150 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: false }}
                 >
                   portfolio
                 </motion.span>
                 <motion.span
-                  initial={{ opacity: 0, y: 120 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2 }}
+                  initial={{ opacity: 0, x: -150 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: false }}
                 >
                   Website
@@ -56,13 +54,13 @@ const App = () => {
               </div>
             </div>
             <motion.button
-              initial={{ opacity: 0, x: -250 }}
+              initial={{ opacity: 0, x: -150 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: false }}
               className="wel-btn"
             >
-              Swagat Xa Hajur Lai
+              Welcome
             </motion.button>
           </div>
         </div>

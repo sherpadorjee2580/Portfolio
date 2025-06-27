@@ -49,20 +49,20 @@ const HomeInfo = forwardRef((props, ref) => {
             ))}
           </div>
 
-          <motion.p
+          <motion.span
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.4 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: false }}
             className="shortInfo"
           >
-            And i'm a <span>Frontend Fresher</span>
-          </motion.p>
+            Frontend Fresher
+          </motion.span>
 
           <motion.p
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: false }}
             className="longInfo"
           >
@@ -73,52 +73,39 @@ const HomeInfo = forwardRef((props, ref) => {
             real-world applications.
           </motion.p>
 
-          <div className="socialMedia">
-            <motion.a
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: false }}
+          <motion.div
+            className="socialMedia"
+            initial={{ opacity: 0, x: -150 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+          >
+            <a
               href="https://www.facebook.com/dorji.lama.sherpa.2025"
               target="_blank"
             >
               <FaFacebookF />
-            </motion.a>
-            <motion.a
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: false }}
+            </a>
+            <a
               href="https://www.instagram.com/dorjilamasherpa/"
               target="_blank"
             >
               <FaInstagram />
-            </motion.a>
-            <motion.a
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: false }}
+            </a>
+            <a
               href="https://www.linkedin.com/in/dorjee-sherpa-ds2580/"
               target="_blank"
             >
               <FaLinkedinIn />
-            </motion.a>
-            <motion.a
-              initial={{ opacity: 0, x: -200 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2 }}
-              viewport={{ once: false }}
-              href="https://x.com/DorjiSherpa2580"
-              target="_blank"
-            >
+            </a>
+            <a href="https://x.com/DorjiSherpa2580" target="_blank">
               <FaXTwitter />
-            </motion.a>
-          </div>
+            </a>
+          </motion.div>
           <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 5 }}
+            initial={{ opacity: 0, x: -150 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.2 }}
             viewport={{ once: false }}
             className="downloadCV"
           >

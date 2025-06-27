@@ -2,6 +2,7 @@ import React from "react";
 import "../style/Contact.css";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 import {
   FaFacebook,
@@ -21,7 +22,7 @@ const Contact = () => {
 
     setTimeout(() => {
       setIsloading(false);
-      formRef.current.reset()
+      formRef.current.reset();
     }, 3000);
 
     emailjs
@@ -45,22 +46,57 @@ const Contact = () => {
     <div className="contactUs">
       <div className="contactUs-container">
         <div className="contactUs-title">
-          <p>Contact Us</p>
+          <motion.p
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            viewport={{ once: false }}
+          >
+            Contact Us
+          </motion.p>
         </div>
         <div className="contactUs-formContainer">
           <form ref={formRef} onSubmit={sendEmail}>
-            <input name="name" type="text" placeholder="Name" required />
-            <input name="email" type="email" placeholder="Email" required />
-            <textarea
+            <motion.input
+              name="name"
+              type="text"
+              placeholder="Name"
+              required
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.15 }}
+              viewport={{ once: false }}
+            />
+            <motion.input
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: false }}
+            />
+            <motion.textarea
               name="message"
               type="text"
               placeholder="Message"
               required
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.25 }}
+              viewport={{ once: false }}
             />
-            <button className="submit">
+            <motion.button
+              className="submit"
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              viewport={{ once: false }}
+            >
               {" "}
               {isloading ? <div className="loader"></div> : "submit"}
-            </button>
+            </motion.button>
           </form>
           <div className="contactUs-socialmedia">
             <p className="contact-title">Get In Touch</p>

@@ -110,8 +110,8 @@
     }
   }
 }
-@media (max-width:768px){
-  .sidebarContainer{
-    width: 60%;
+@media (max-width: 768px) {
+  .sidebarContainer {
+    width: 100%;
   }
 }

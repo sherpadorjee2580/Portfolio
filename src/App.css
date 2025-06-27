@@ -28,52 +28,63 @@ body {
     #444
   );
   overflow: hidden;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    .texts {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .welcomeMsg {
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 40px;
-        color: #dadada;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-      }
-      .txt {
-        display: flex;
-        gap: 20px;
-        span {
-          font-size: 55px;
-          font-weight: 700;
-          text-transform: capitalize;
-          color: rgb(0, 195, 255);
-          background-clip: text;
-          text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
-        }
-      }
-    }
-    .wel-btn {
-      height: 50px;
-      padding: 0 25px;
-      border-radius: 10px;
-      border: none;
-      background-color: rgb(40, 113, 203);
-      font-size: 20px;
-      font-weight: 500;
-      color: white;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-    }
-  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcomeMsg {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #dadada;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.txt {
+  display: flex;
+  gap: 20px;
+}
+span {
+  font-size: 55px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: rgb(0, 195, 255);
+  background-clip: text;
+  text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
+}
+.wel-btn {
+  height: 50px;
+  padding: 0 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(40, 113, 203);
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 .welcome.slide-up {
   opacity: 0;
   transform: scale(1.5);
+}
+@media (max-width: 768px) {
+  .welcomeMsg,
+  .txt,
+  span {
+    font-size: 30px;
+  }
+  .wel-btn {
+    height: 40px;
+    font-size: 16px;
+    padding: 0 20px;
+    font-weight: 400;
+  }
 }

@@ -14,8 +14,8 @@ const Skills = forwardRef((props, ref) => {
       <div className="skillsContainer">
         <motion.div
           className="skill-title"
-          initial={{ opacity: 0, y: 200 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -150 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
@@ -24,8 +24,8 @@ const Skills = forwardRef((props, ref) => {
         <div className="content">
           <div className="content-left">
             <motion.p
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: false }}
             >
@@ -35,8 +35,8 @@ const Skills = forwardRef((props, ref) => {
           <div className="content-right">
             <div className="row">
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: false }}
                 id="html"
@@ -46,8 +46,8 @@ const Skills = forwardRef((props, ref) => {
                 <p>HTML</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: false }}
                 id="css"
@@ -57,8 +57,8 @@ const Skills = forwardRef((props, ref) => {
                 <p>CSS</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: false }}
                 id="sass"
@@ -68,8 +68,8 @@ const Skills = forwardRef((props, ref) => {
                 <p>SASS</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: false }}
                 id="tailwind"
@@ -79,8 +79,8 @@ const Skills = forwardRef((props, ref) => {
                 <p>Tailwind</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: false }}
                 id="javascript"
@@ -90,8 +90,8 @@ const Skills = forwardRef((props, ref) => {
                 <p>JavaScript</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: false }}
                 id="react"

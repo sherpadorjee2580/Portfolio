@@ -13,6 +13,7 @@ import { FaAngleUp } from "react-icons/fa6";
 const Portfolio = () => {
   const [sidebar, SetSidebar] = useState(-600);
   const [borderRadius, SetBorderRadius] = useState("100%");
+  const [isOpen, SetIsOpen] = useState(null);
 
   const aboutMeRef = useRef(null);
   const experiencerRef = useRef(null);
@@ -21,37 +22,45 @@ const Portfolio = () => {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
 
-  const scrollToAboutMe = () => {
-    aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToExperience = () => {
-    experiencerRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToHome = () => {
-    homeRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToSkill = () => {
-    skillRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToProject = () => {
-    projectRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const showSidebar = () => {
     SetSidebar(0);
     SetBorderRadius(0);
+    SetIsOpen(true);
   };
   const hideSidebar = () => {
     SetSidebar(-600);
     SetBorderRadius("50%");
+    SetIsOpen(false);
+  };
+
+  const scrollToAboutMe = () => {
+    aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
+    hideSidebar();
+  };
+
+  const scrollToExperience = () => {
+    experiencerRef.current?.scrollIntoView({ behavior: "smooth" });
+    hideSidebar();
+  };
+
+  const scrollToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+    hideSidebar();
+  };
+
+  const scrollToSkill = () => {
+    skillRef.current?.scrollIntoView({ behavior: "smooth" });
+    hideSidebar();
+  };
+
+  const scrollToProject = () => {
+    projectRef.current?.scrollIntoView({ behavior: "smooth" });
+    hideSidebar();
+  };
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    hideSidebar();
   };
 
   const scrollTop = () => {
@@ -87,7 +96,11 @@ const Portfolio = () => {
           scrollToContact,
         }}
       />
-      <Navbar showSidebar={showSidebar} hideSidebar={hideSidebar} />
+      <Navbar
+        showSidebar={showSidebar}
+        hideSidebar={hideSidebar}
+        isOpen={isOpen}
+      />
       <HomeInfo ref={homeRef} />
       <Aboutme ref={aboutMeRef} />
       <Skills ref={skillRef} />

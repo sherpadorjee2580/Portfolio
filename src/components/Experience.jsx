@@ -8,8 +8,8 @@ const Experience = forwardRef((props, ref) => {
     <div ref={ref} className="experienceContainer">
       <div className="experience-wrapper">
         <motion.div
-          initial={{ opacity: 0, y: 150 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -150 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
           className="experience-titleContainer"
@@ -20,8 +20,8 @@ const Experience = forwardRef((props, ref) => {
         <div className="experience">
           <motion.div
             className="parijat"
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: false }}
           >
@@ -30,15 +30,14 @@ const Experience = forwardRef((props, ref) => {
                 src="parijatlogo.webp"
                 alt="parijatLogo"
                 className="img-fluid"
-                
               />
             </div>
             <p className="company">Parijat InfoTech</p>
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             viewport={{ once: false }}
             className="position"
@@ -46,8 +45,8 @@ const Experience = forwardRef((props, ref) => {
             FrontEnd Trainee
           </motion.p>
           <motion.p
-            initial={{ opacity: 0, y: 150 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: false }}
             className="duration"

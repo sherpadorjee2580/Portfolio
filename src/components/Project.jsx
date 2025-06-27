@@ -45,12 +45,20 @@ const Project = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="project">
       <div className="project-wrap">
-        <h4 className="project-title">Projects</h4>
+        <motion.h4
+          className="project-title"
+          initial={{ opacity: 0, x: -150 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: false }}
+        >
+          Projects
+        </motion.h4>
         <div className="project-container">
           {project.map((item, idx) => (
             <motion.div
-              initial={{ opacity: 0, y: 150 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: false }}
               ref={projectRef}
