@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Sidebar from "./Sidebar";
 import Project from "./Project";
 import Contact from "./Contact";
+import Footer from "./Footer";
 import { useState, useRef, useEffect } from "react";
 import "../Portfolio.css";
 import { FaAngleUp } from "react-icons/fa6";
@@ -108,6 +109,7 @@ const Portfolio = () => {
       <Project ref={projectRef} />
       {/* <Articles /> */}
       <Contact ref={contactRef} />
+      <Footer/>
     </div>
   );
 };

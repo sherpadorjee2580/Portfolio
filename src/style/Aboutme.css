@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
 }
 .aboutMe-container {
   padding-top: 50px;
@@ -36,7 +35,8 @@
   .first-desc,
   .second-desc {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 
@@ -47,7 +47,6 @@
     align-items: center;
     justify-content: center;
     margin: 30px 0;
-    padding-top: 100px;
     padding-bottom: 0;
   }
   .aboutMe-container {
@@ -62,12 +61,12 @@
     display: flex;
     flex: 1;
   }
-  .aboutMe-left{
+  .aboutMe-left {
     width: 100%;
     display: flex;
     align-items: flex-start;
-   .greeting{
-    font-size: 40px;
-   }
+    .greeting {
+      font-size: 40px;
+    }
   }
 }

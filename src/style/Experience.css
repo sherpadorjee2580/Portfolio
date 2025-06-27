@@ -8,7 +8,6 @@
 
 .experienceContainer {
   display: flex;
-  padding: 100px 0;
   .experience-wrapper {
     max-width: 1140px;
     display: flex;

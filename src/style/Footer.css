@@ -1,0 +1,40 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.footerContainer {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-haveProject {
+  color: white;
+  font-size: 18px;
+}
+.gmail {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+}
+.design {
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .footer-haveProject {
+    font-size: 14px;
+  }
+  .gmail {
+    font-size: 18px;
+  }
+  .design {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}

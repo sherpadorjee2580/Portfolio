@@ -49,7 +49,7 @@ const Project = forwardRef((props, ref) => {
           className="project-title"
           initial={{ opacity: 0, x: -150 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           viewport={{ once: false }}
         >
           Projects
@@ -59,7 +59,7 @@ const Project = forwardRef((props, ref) => {
             <motion.div
               initial={{ opacity: 0, x: -150 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
               viewport={{ once: false }}
               ref={projectRef}
               key={idx}
@@ -83,7 +83,7 @@ const Project = forwardRef((props, ref) => {
                     initial={{ opacity: 0, y: -250 }}
                     animate={{ opacity: 1, y: -100 }}
                     exit={{ opacity: 0, y: 100 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
                     viewport={{ once: false }}
                     className="project-img"
                     src={item.image}
