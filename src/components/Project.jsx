@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect } from "react";
 import "../style/Project.css";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -31,6 +31,16 @@ const Project = forwardRef((props, ref) => {
   ];
   const [hoveredImg, setHoveredImg] = useState(null);
   const [hovered, setHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleSize();
+    window.addEventListener("resize", handleSize);
+    return () => window.removeEventListener("resize", handleSize);
+  });
 
   return (
     <div ref={ref} className="project">
@@ -47,15 +57,19 @@ const Project = forwardRef((props, ref) => {
               key={idx}
               className="project-col"
               onMouseEnter={() => {
-                setHoveredImg(idx);
-                setHovered(true);
+                if (!isMobile) {
+                  setHoveredImg(idx);
+                  setHovered(true);
+                }
               }}
               onMouseLeave={() => {
-                setHoveredImg(null);
-                setHovered(false);
+                if (!isMobile) {
+                  setHoveredImg(null);
+                  setHovered(false);
+                }
               }}
             >
-              {hoveredImg === idx && (
+              {(hoveredImg === idx || isMobile) && (
                 <AnimatePresence>
                   <motion.img
                     initial={{ opacity: 0, y: -250 }}

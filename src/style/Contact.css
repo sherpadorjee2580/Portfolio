@@ -127,3 +127,20 @@ textarea:focus {
 .link {
   color: #888;
 }
+@media (max-width: 768px) {
+  .contactUs {
+    width: 100vw;
+  }
+
+  .contactUs-container {
+    align-items: center;
+  }
+  .contactUs-formContainer {
+    max-width: 667px;
+    width: 100%;
+    justify-content: center;
+  }
+  .contactUs-socialmedia {
+    display: none;
+  }
+}

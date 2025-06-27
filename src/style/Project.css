@@ -34,10 +34,8 @@
       display: flex;
       flex-wrap: wrap;
       max-width: 1140px;
-      
     }
     .project-col {
-      
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -96,3 +94,30 @@
     transform: translateY(-25%);
   }
 } */
+@media (max-width: 768px) {
+  .project {
+    width: 100vw;
+    padding: 80px 20px;
+    max-width: 768px;
+    .project-wrap {
+      gap: 0;
+      .project-title {
+        font-size: 1.9rem;
+        font-weight: 600;
+      }
+      .project-container {
+        display: flex;
+        flex-direction: column;
+        .project-col {
+          padding: 20px 0;
+          img {
+            display: none;
+          }
+          .project-col-title {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
