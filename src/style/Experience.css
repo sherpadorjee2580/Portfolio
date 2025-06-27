@@ -111,8 +111,7 @@
     width: 100vw;
     .experience-wrapper {
       width: inherit;
-
-      gap: 10px;
+      gap: 20px;
       justify-content: center;
     }
   }
@@ -128,6 +127,7 @@
     margin-right: 0;
   }
   .experience {
+    gap: 5px;
     .imageContainer {
       height: 40px;
       width: 40px;

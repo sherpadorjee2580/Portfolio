@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 150px;
   padding: 150px 0;
+  overflow-x: hidden;
 }
 .arrow {
   height: 40px;

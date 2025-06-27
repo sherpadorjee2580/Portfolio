@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../style/Contact.css";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
@@ -11,7 +11,7 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   const [isloading, setIsloading] = useState(false);
 
   const formRef = useRef();
@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contactUs">
+    <div ref={ref} className="contactUs">
       <div className="contactUs-container">
         <div className="contactUs-title">
           <motion.p
@@ -123,6 +123,6 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Contact;
