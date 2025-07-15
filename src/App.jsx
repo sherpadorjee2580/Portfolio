@@ -53,15 +53,6 @@ const App = () => {
                 </motion.span>
               </div>
             </div>
-            <motion.button
-              initial={{ opacity: 0, x: -150 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: false }}
-              className="wel-btn"
-            >
-              Welcome
-            </motion.button>
           </div>
         </div>
       )}
