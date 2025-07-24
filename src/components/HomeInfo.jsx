@@ -109,7 +109,7 @@ const HomeInfo = forwardRef((props, ref) => {
             viewport={{ once: false }}
             className="downloadCV"
           >
-            <a href="/DorjiSherpa__CV.docx" download="DorjiSherpa__CV.docx">
+            <a href="/Dorji__Sherpa__CV.docx" download="Dorji__Sherpa__CV.docx">
               Download CV
             </a>
           </motion.button>
